@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas en la Vida Real</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="watermark-bg">MATEMÁTICAS 2005</div>
+
+    <header>
+        <h1>Matemáticas</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>📈 Plan de Ahorro Inteligente</h2>
+            <div class="contexto">
+                <strong>¿Cómo funciona?</strong> Este plan imita a la naturaleza: cada mes ahorras la suma de lo que guardaste en los dos meses anteriores. ¡Tu dinero crece cada vez más rápido!
+            </div>
+            
+            <div class="explicacion">
+                <p><strong>La regla es simple:</strong></p>
+                <p class="formula-visual">Ahorro de hoy = (Ahorro mes pasado) + (Ahorro mes antepasado)</p>
+            </div>
+
+            <form id="fibForm">
+                <label>¿Cuántos meses quieres proyectar?</label>
+                <input type="number" id="meses" placeholder="Escribe un número...">
+                <button type="button" onclick="calcularAhorro()">Ver mi ahorro total</button>
+            </form>
+            <div id="resultadoFibonacci" class="resultado">Introduce los meses para ver el cálculo.</div>
+        </section>
+
+        <section class="card">
+            <h2>🔐 Validador de Seguridad</h2>
+            <div class="contexto">
+                <strong>¿Para qué sirve?</strong> En internet, las llaves más seguras se hacen con números "Primos". Son números especiales que no se pueden romper en partes iguales.
+            </div>
+
+            <div class="explicacion">
+                <p><strong>¿Cómo saber si es seguro?</strong></p>
+                <p class="formula-visual">El número solo puede dividirse entre 1 y entre él mismo.</p>
+            </div>
+            
+            <form id="primosForm">
+                <label>Ingresa tu código de seguridad:</label>
+                <input type="number" id="clave" placeholder="Escribe tu código...">
+                <button type="button" onclick="validarSeguridad()">Verificar seguridad</button>
+            </form>
+            <div id="resultadoPrimos" class="resultado">Introduce un número para validar.</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto realizado por: <strong>Rebeca Rojas</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

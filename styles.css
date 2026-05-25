@@ -1,0 +1,124 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8e1c0; /* Beige */
+    color: #5d5d5d;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.watermark-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 6rem;
+    color: #d881ac;
+    opacity: 0.05;
+    z-index: -2;
+    white-space: nowrap;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+body::after {
+    content: "REBECA ROJAS";
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #66b5ff;
+    opacity: 0.4;
+    z-index: 100;
+    font-family: 'Courier New', monospace;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: #fbcce7;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 6px solid #a2d2ff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 { color: #d881ac; text-transform: uppercase; letter-spacing: 3px; margin: 0; }
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.card {
+    background: #ffffff;
+    border: 2px solid #e0e0d1;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 12px 12px 0px #a2d2ff;
+}
+
+.contexto {
+    background-color: #fffcf0;
+    padding: 15px;
+    border-left: 6px solid #fbcce7;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #fbcce7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #a2d2ff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #89c2f7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162, 210, 255, 0.4);
+}
+
+.resultado {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fcfcf4;
+    border: 2px dotted #d881ac;
+    border-radius: 10px;
+    color: rgb(93, 93, 93); 
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #e0e0d1;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    .container { width: 95%; }
+    h1 { font-size: 1.6rem; }
+    .watermark-bg { font-size: 3rem; }
+}
