@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo II: Primalidad | Rebeca Rojas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="watermark">REBECA ROJAS</div>
+    <div class="content-wrapper">
+        <a href="index.html" class="back-link">← VOLVER AL MENÚ PRINCIPAL</a>
+        <span class="topic-label">CRIPTOGRAFÍA ASIMÉTRICA</span>
+        <h2>🛡️ La "Trampa" Matemática y la Ciberseguridad</h2>
+
+        <div class="math-container">
+            <div class="math-label">TEOREMA FUNDAMENTAL DE LA ARITMÉTICA</div>
+            <span class="f-main">P = { n ∈ ℕ | |D(n)| = 2 }</span>
+            <div class="math-sub-text">D(n) = { d ∈ ℕ : n mod d = 0 }</div>
+        </div>
+
+        <div class="theory-grid">
+            <div class="theory-main">
+                <h3>¿Por qué se utiliza esta propiedad en Seguridad?</h3>
+                <p>En el corazón de la criptografía moderna (como el cifrado RSA) reside la propiedad de los números primos. La "trampa" consiste en que multiplicar dos números primos grandes es computacionalmente sencillo para cualquier CPU, pero realizar la operación inversa (la <strong>Factorización de Primos</strong>) es un problema matemático que tomaría miles de años a las supercomputadoras actuales.</p>
+                <p>Usamos esta lógica para crear "puertas traseras" matemáticas. Si una contraseña o clave bancaria se basa en un número primo de alta densidad (mínimo 6 dígitos), la probabilidad de ser vulnerada por ataques de fuerza bruta disminuye drásticamente, ya que no existen divisores intermedios que faciliten el hackeo.</p>
+            </div>
+            <aside class="glossary-box">
+                <h4>Glosario Técnico II</h4>
+                <ul>
+                    <li><strong>Primalidad:</strong> Propiedad de un número de ser divisible solo por 1 y sí mismo.</li>
+                    <li><strong>Aritmética Modular:</strong> Operación que devuelve el residuo de una división.</li>
+                    <li><strong>Fuerza Bruta:</strong> Intento de descifrar una clave probando todas las combinaciones.</li>
+                </ul>
+            </aside>
+        </div>
+
+        <h3>Matriz de Validación (10 Vectores de Prueba Obligatorios)</h3>
+        <div class="matrix-grid">
+            <div class="m-item ok">100003<br>PRIMO ✅</div>
+            <div class="m-item ok">104729<br>PRIMO ✅</div>
+            <div class="m-item ok">999983<br>PRIMO ✅</div>
+            <div class="m-item ok">1000003<br>PRIMO ✅</div>
+            <div class="m-item ok">9999991<br>PRIMO ✅</div>
+            <div class="m-item fail">100002<br>PAR ❌</div>
+            <div class="m-item fail">12345<br>DIV 5 ❌</div>
+            <div class="m-item fail">999999<br>DIV 3 ❌</div>
+            <div class="m-item fail">7<br>CORTO ❌</div>
+            <div class="m-item fail">555555<br>DÉBIL ❌</div>
+        </div>
+
+        <div class="exercise-panel">
+            <h3>Auditoría de Clave (Mínimo 6 dígitos)</h3>
+            <div class="input-group">
+                <input type="number" id="primeInput" placeholder="Inserte Clave de Seguridad...">
+                <button class="exec-btn" onclick="runPrime()">ANALIZAR INTEGRIDAD</button>
+            </div>
+            <div id="primeRes" class="analysis-box" style="display:none;"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

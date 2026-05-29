@@ -2,61 +2,47 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemáticas en la Vida Real</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>MATEMÁTICAS EN LA VIDA REAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="watermark-bg">MATEMÁTICAS 2005</div>
+<body class="home-bg">
+    <!-- MARCA DE AGUA EXCLUSIVA -->
+    <div class="watermark">REBECA ROJAS</div>
 
-    <header>
-        <h1>Matemáticas</h1>
-    </header>
+    <div class="home-container">
+        <header class="academic-header">
+            <p class="univ">UNIVERSIDAD MAYOR DE SAN ANDRÉS</p>
+            <p class="fac">FACULTAD DE CIENCIAS PURAS Y NATURALES | INFORMÁTICA</p>
+            <h1>MATEMÁTICAS EN LA VIDA REAL</h1>
+            <p class="author">REBECA ESTHER ROJAS MOREJÓN</p>
+            <div class="badge-tech">Sistemas de Alta Disponibilidad & Criptografía | 2026</div>
+        </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>📈 Plan de Ahorro Inteligente</h2>
-            <div class="contexto">
-                <strong>¿Cómo funciona?</strong> Este plan imita a la naturaleza: cada mes ahorras la suma de lo que guardaste en los dos meses anteriores. ¡Tu dinero crece cada vez más rápido!
-            </div>
-            
-            <div class="explicacion">
-                <p><strong>La regla es simple:</strong></p>
-                <p class="formula-visual">Ahorro de hoy = (Ahorro mes pasado) + (Ahorro mes antepasado)</p>
-            </div>
+        <div class="intro-text-box">
+            <p>Bienvenido al portal de análisis computacional. Aquí exploramos cómo las abstracciones matemáticas resuelven problemas del mundo real: desde la optimización del comportamiento financiero hasta el blindaje de infraestructuras críticas digitales.</p>
+        </div>
 
-            <form id="fibForm">
-                <label>¿Cuántos meses quieres proyectar?</label>
-                <input type="number" id="meses" placeholder="Escribe un número...">
-                <button type="button" onclick="calcularAhorro()">Ver mi ahorro total</button>
-            </form>
-            <div id="resultadoFibonacci" class="resultado">Introduce los meses para ver el cálculo.</div>
-        </section>
-
-        <section class="card">
-            <h2>🔐 Validador de Seguridad</h2>
-            <div class="contexto">
-                <strong>¿Para qué sirve?</strong> En internet, las llaves más seguras se hacen con números "Primos". Son números especiales que no se pueden romper en partes iguales.
-            </div>
-
-            <div class="explicacion">
-                <p><strong>¿Cómo saber si es seguro?</strong></p>
-                <p class="formula-visual">El número solo puede dividirse entre 1 y entre él mismo.</p>
-            </div>
-            
-            <form id="primosForm">
-                <label>Ingresa tu código de seguridad:</label>
-                <input type="number" id="clave" placeholder="Escribe tu código...">
-                <button type="button" onclick="validarSeguridad()">Verificar seguridad</button>
-            </form>
-            <div id="resultadoPrimos" class="resultado">Introduce un número para validar.</div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Proyecto realizado por: <strong>Rebeca Rojas</strong></p>
-    </footer>
-
-    <script src="JS/script.js"></script>
+        <nav class="main-menu">
+            <a href="fibonacci.html" class="menu-card">
+                <span class="card-icon">📈</span>
+                <h2>Módulo I: Fibonacci</h2>
+                <p>Recursividad lineal aplicada a la optimización de capital exponencial.</p>
+                <div class="card-footer-tag">Modelado Financiero</div>
+            </a>
+            <a href="num-primos.html" class="menu-card">
+                <span class="card-icon">🛡️</span>
+                <h2>Módulo II: Primalidad</h2>
+                <p>Teoría de números y el concepto de la trampa matemática para cifrado.</p>
+                <div class="card-footer-tag">Ciberseguridad RSA</div>
+            </a>
+            <a href="ambos.html" class="menu-card">
+                <span class="card-icon">🔐</span>
+                <h2>Módulo III: Ambos</h2>
+                <p>Orquestación híbrida de funciones para la generación de tokens OTP.</p>
+                <div class="card-footer-tag">Pipeline de Bóveda</div>
+            </a>
+        </nav>
+    </div>
 </body>
 </html>

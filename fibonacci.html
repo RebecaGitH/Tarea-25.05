@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo I: Fibonacci | Rebeca Rojas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="watermark">REBECA ROJAS</div>
+    <div class="content-wrapper">
+        <a href="index.html" class="back-link">← VOLVER AL MENÚ PRINCIPAL</a>
+        <span class="topic-label">ANÁLISIS DE RECURRENCIA LINEAL</span>
+        <h2>📈 Sucesión de Fibonacci Aplicada al Ahorro Real</h2>
+
+        <div class="math-container">
+            <div class="math-label">MODELADO ASINTÓTICO DE CRECIMIENTO</div>
+            <span class="f-main">F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></span>
+            <div class="math-sub-text">{ ∀ n ∈ ℤ | n ≥ 2 } ∩ { F₀=0, F₁=1 }</div>
+        </div>
+
+        <div class="theory-grid">
+            <div class="theory-main">
+                <h3>¿Por qué se utiliza esta fórmula para este problema?</h3>
+                <p>La sucesión de Fibonacci no es meramente una curiosidad estética; en el ámbito de la informática y las finanzas, representa el <strong>Modelo de Crecimiento Sostenible</strong>. Al programar algoritmos de ahorro basados en esta fórmula, se logra romper la "barrera de resistencia psicológica" del ahorro tradicional.</p>
+                <p>La fórmula nos obliga a empezar con cantidades insignificantes que, mediante la suma de los dos estados anteriores, escalan de forma exponencial. Esto imita el comportamiento del <strong>Interés Compuesto</strong>: no ahorras una cantidad fija, sino que tu capacidad de ahorro crece en función de tu historial previo, optimizando la acumulación de capital sin sentir un impacto agresivo en la liquidez inmediata.</p>
+            </div>
+            <aside class="glossary-box">
+                <h4>Glosario Técnico I</h4>
+                <ul>
+                    <li><strong>Recursión:</strong> Técnica donde una función se resuelve llamándose a sí misma.</li>
+                    <li><strong>Big O Notation:</strong> Medida de la eficiencia de un algoritmo (Tiempo/Espacio).</li>
+                    <li><strong>Iteración:</strong> Ejecución repetida de un bloque para optimizar memoria.</li>
+                </ul>
+            </aside>
+        </div>
+
+        <h3>Gráfico de Progresión de Capital (Escala Áurea)</h3>
+        <div class="chart-container">
+            <div class="bar-chart">
+                <div class="bar" style="height: 5%"><span class="bar-val">F1</span></div>
+                <div class="bar" style="height: 8%"><span class="bar-val">F2</span></div>
+                <div class="bar" style="height: 13%"><span class="bar-val">F3</span></div>
+                <div class="bar" style="height: 21%"><span class="bar-val">F4</span></div>
+                <div class="bar" style="height: 34%"><span class="bar-val">F5</span></div>
+                <div class="bar" style="height: 55%"><span class="bar-val">F6</span></div>
+                <div class="bar" style="height: 89%"><span class="bar-val">F7</span></div>
+                <div class="bar" style="height: 100%"><span class="bar-val">F8</span></div>
+            </div>
+            <p class="chart-legend">Curva de aceleración asintótica del capital acumulado periodo a periodo.</p>
+        </div>
+
+        <h3>Diagrama de Flujo del Proceso</h3>
+        <div class="flow-diagram">
+            <div class="node step-start">INICIO: VALOR N (MESES)</div>
+            <div class="arrow">↓</div>
+            <div class="node step-proc">REGISTRO: A=0, B=1, TOTAL=0</div>
+            <div class="arrow">↓</div>
+            <div class="node step-loop">BUCLE: TOTAL += B | TEMP = A+B | A=B | B=TEMP</div>
+            <div class="arrow">↓</div>
+            <div class="node step-end">OUTPUT: RIQUEZA ACUMULADA RETORNADA</div>
+        </div>
+
+        <div class="exercise-panel">
+            <h3>Simulador de Ahorro Coquette</h3>
+            <div class="input-group">
+                <input type="number" id="fiboInput" placeholder="Periodos de Análisis (Meses)...">
+                <button class="exec-btn" onclick="runFibo()">EJECUTAR SIMULACIÓN</button>
+            </div>
+            <div id="fiboRes" class="analysis-box" style="display:none;"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
